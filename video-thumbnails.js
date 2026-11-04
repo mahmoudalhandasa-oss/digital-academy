@@ -1,0 +1,1 @@
+document.querySelectorAll('.video-card iframe').forEach(frame=>{const id=frame.src.split('/').pop(),img=document.createElement('img');img.className='video-thumb';img.src=`https://i.ytimg.com/vi/${id}/hqdefault.jpg`;img.alt=frame.title;frame.after(img);frame.style.display='none'});

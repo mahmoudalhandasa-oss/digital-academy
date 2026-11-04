@@ -1,0 +1,1 @@
+.video-card{position:relative}.video-lock{position:absolute;inset:0 0 auto;height:calc(100% - 82px);display:grid;place-items:center;background:linear-gradient(135deg,#090c22bb,#31205fcc);color:#fff!important;font-size:11px!important;font-weight:700;backdrop-filter:blur(3px);z-index:2;cursor:pointer}.video-lock:hover{background:linear-gradient(135deg,#15113ae6,#51378ce6)}

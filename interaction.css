@@ -1,0 +1,54 @@
+html { touch-action: manipulation; }
+
+button, a, input, label {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button, .primary, .secondary, .filter, .language-card a, .language-card button,
+.language-video, .course-card a, .login {
+  touch-action: manipulation;
+  transition: transform .12s ease, opacity .12s ease, box-shadow .12s ease;
+}
+
+button:active, .primary:active, .secondary:active, .filter:active,
+.language-card a:active, .language-card button:active, .language-video:active,
+.course-card a:active, .login:active {
+  transform:scale(.97);
+  opacity:.84;
+}
+
+button, .primary, .secondary, .filter, .login, .language-card a,
+.language-card button, .language-video, .course-card a { cursor:pointer; }
+
+.language-video img { filter:brightness(.42); }
+
+button.language-video {
+  width:100%;
+  padding:0;
+  border:0;
+  text-align:inherit;
+  font:inherit;
+}
+
+.language-video .language-video-play {
+  position:absolute;
+  top:24%;
+  right:43%;
+  font-size:22px;
+}
+
+.language-video .language-video-lock {
+  position:absolute;
+  top:auto;
+  right:0;
+  bottom:30px;
+  left:0;
+  display:grid;
+  min-height:30px;
+  place-items:center;
+  background:#090c22c9;
+  color:#fff;
+  font-size:10px;
+  font-weight:700;
+  backdrop-filter:blur(3px);
+}

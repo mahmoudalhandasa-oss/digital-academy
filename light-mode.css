@@ -1,0 +1,38 @@
+/* High-contrast overrides for the white theme. */
+.light-mode { background:#f7f9ff!important; color:#172033!important; }
+.light-mode main { color:#172033; }
+.light-mode .brand, .light-mode .nav a, .light-mode .section h2,
+.light-mode .cta h2, .light-mode .course-card h3, .light-mode .path-grid h3,
+.light-mode .language-card h3, .light-mode .bacc-intro h2 {
+  background:none!important;
+  color:#172033!important;
+  -webkit-text-fill-color:#172033!important;
+}
+.light-mode .eyebrow, .light-mode .category, .light-mode .path-grid p { color:#0b8176!important; }
+.light-mode .shine { background:linear-gradient(100deg,#087e74,#5d46c4)!important; -webkit-background-clip:text!important; background-clip:text!important; color:transparent!important; -webkit-text-fill-color:transparent!important; }
+.light-mode .primary { background:linear-gradient(110deg,#6045cc,#8060e7)!important; color:#fff!important; -webkit-text-fill-color:#fff!important; }
+.light-mode .secondary, .light-mode .login { background:#fff!important; color:#172033!important; }
+.light-mode .section-head>p, .light-mode .lead, .light-mode .trust,
+.light-mode .card-content .meta, .light-mode .catalog-footer span,
+.light-mode .language-card p, .light-mode .video-card p, .light-mode .bacc-intro>p:not(.eyebrow) { color:#4f5d75!important; }
+.light-mode .course-card, .light-mode .language-card, .light-mode .video-card,
+.light-mode .path-grid article, .light-mode .language-video { background:#fff!important; border-color:#d4ddec!important; }
+.light-mode .course-card:hover { border-color:#8065dc!important; box-shadow:0 12px 26px #2737561c!important; }
+.light-mode .card-bottom { border-color:#dce3ef!important; }
+.light-mode .card-bottom a, .light-mode .language-card a, .light-mode .language-card button,
+.light-mode .path-grid a, .light-mode footer>a:last-child { color:#5741b8!important; }
+.light-mode .price { color:#35415a!important; }
+.light-mode .price.free, .light-mode .bacc-price strong { color:#087e74!important; }
+.light-mode .filter { background:#fff!important; color:#26334b!important; border-color:#d4ddec!important; }
+.light-mode .filter.active { background:#6951d1!important; border-color:#6951d1!important; color:#fff!important; }
+.light-mode .filter.active em { color:#e4ddff!important; }
+.light-mode .search { background:#fff!important; border-color:#d4ddec!important; color:#4f5d75!important; }
+.light-mode .search input { color:#172033!important; }
+.light-mode .search input::placeholder { color:#748097!important; }
+.light-mode .baccalaureate { background:radial-gradient(circle at 8% 15%,#754cff18,transparent 32%),#fff!important; }
+.light-mode .bacc-price { border-color:#dce3ef!important; color:#4f5d75!important; }
+.light-mode .stats strong { color:#172033!important; }
+.light-mode .stats span { color:#4f5d75!important; }
+.light-mode .path-icon { background:#ede9ff!important; color:#5d46c4!important; }
+.light-mode .cta { background:linear-gradient(110deg,#e8e4ff,#dff8f5)!important; border-color:#bdb3ed!important; }
+.light-mode .theme-toggle { background:#fff5cc!important; color:#826100!important; }
