@@ -20,14 +20,16 @@ if (languageGrid && languageVideoGrid) {
     const query = encodeURIComponent(`learn ${name} for beginners`);
     const photo = languagePhotos[index % languagePhotos.length];
 
-    return `<article class="language-card">
+    const isFree = index < 2;
+    const coursePrice = isFree ? 'مجانية' : '200 ج.م';
+    return `<article class="language-card ${isFree ? 'free-lang' : ''}">
       <img loading="lazy" src="https://images.unsplash.com/photo-${photo}?auto=format&fit=crop&w=900&q=82" alt="تعلم ${name}">
       <div>
-        <span>50 ج.م</span>
+        <span>${coursePrice}</span>
         <h3>${name} للمبتدئين</h3>
         <p>فيديوهات تأسيسية ومحادثة عملية.</p>
         <a href="https://www.youtube.com/results?search_query=${query}" target="_blank" rel="noopener">شاهد الفيديوهات على YouTube ↗</a>
-        <button class="language-buy" data-title="${name} للمبتدئين" data-price="50 ج.م">اشترك الآن ↗</button>
+        ${isFree ? `<a href="https://www.youtube.com/results?search_query=${query}" target="_blank" rel="noopener">ابدأ مجانًا ←</a>` : `<button class="language-buy" data-title="${name} للمبتدئين" data-price="200 ج.م">اشترك الآن ↗</button>`}
       </div>
     </article>`;
   }).join('');
@@ -36,10 +38,12 @@ if (languageGrid && languageVideoGrid) {
     const query = encodeURIComponent(`learn ${name} for beginners`);
     const photo = languagePhotos[(index + 2) % languagePhotos.length];
 
-    return `<button type="button" class="language-video language-buy" data-title="${name} للمبتدئين" data-price="50 ج.م">
+    const isFree = index < 2;
+    const coursePrice = isFree ? 'مجانية' : '200 ج.م';
+    return `<button type="button" class="language-video ${isFree ? '' : 'language-buy'}" data-title="${name} للمبتدئين" data-price="${coursePrice}">
       <img loading="lazy" src="https://images.unsplash.com/photo-${photo}?auto=format&fit=crop&w=700&q=80" alt="فيديو ${name}">
       <span class="language-video-play">▶</span><b>فيديو ${name} للمبتدئين</b>
-      <span class="language-video-lock">🔒 اشترك للمشاهدة — 50 ج.م</span>
+      <span class="language-video-lock">${isFree ? '✓ متاح مجانًا' : '🔒 اشترك للمشاهدة — 200 ج.م'}</span>
     </button>`;
   }).join('');
 }

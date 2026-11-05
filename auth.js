@@ -27,7 +27,9 @@ let signup = false;
 
 function setUser(user) {
   loginButton.dataset.logged = user ? 'true' : 'false';
-  loginButton.textContent = user ? `مرحباً، ${user.name}` : 'تسجيل الدخول ↗';
+  const label = loginButton.querySelector('.login-label');
+  if (label) label.textContent = user ? `مرحباً، ${user.name}` : 'تسجيل الدخول';
+  else loginButton.textContent = user ? `مرحباً، ${user.name}` : 'تسجيل الدخول ↗';
 }
 
 function setMode(isSignup) {

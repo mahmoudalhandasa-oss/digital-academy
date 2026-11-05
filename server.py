@@ -52,7 +52,7 @@ class Academy(SimpleHTTPRequestHandler):
     def do_GET(self):
         path=urlparse(self.path).path
         if path=='/api/health': return reply(self,{'status':'ok','courses':300})
-        if path=='/api/courses': return reply(self,{'total':300,'items':[{'id':i+1,'type':'free' if i<100 else ('egp' if i<200 else 'usd'),'source_url':'https://maharatech.gov.eg/course/'} for i in range(300)]})
+        if path=='/api/courses': return reply(self,{'total':300,'items':[{'id':i+1,'type':'free' if i==0 else 'egp','source_url':'https://maharatech.gov.eg/course/'} for i in range(300)]})
         if path=='/api/me':
             user=self.current(); return reply(self,{'user':user} if user else {'user':None},200 if user else 401)
         return super().do_GET()
